@@ -1,7 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Image from "next/image";
-import MyPhoto from "../../../public/imgs/FernandoHirae2.png"
 import { motion } from "framer-motion";
 
 function AboutMe() {
@@ -29,7 +28,7 @@ function AboutMe() {
 
                     <div className="flex justify-center items-center">
                         <Image className="max-h-96 max-w-4xl rounded-md border-2 border-gray-600 lg:max-h-96"
-                            src={MyPhoto}
+                            src="/imgs/FernandoHirae2.png"
                             width={300}
                             height={600}
                             alt="Picture of the author"

@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         <div>${req.body.message}</div>`
     }
     
-    transporter.sendMail(mailData, function (err, info) {
+    transporter.sendMail(mailData, function (err: any | null, info: any) {
         if(err){
             res.status(404).json({
             error: `Connection refused at ${err.address}`
