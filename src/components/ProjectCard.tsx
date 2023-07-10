@@ -15,7 +15,7 @@ function ProjectCard(props: Props) {
 
     const [selectedProject, setSelectedProject] = useState(null);
 
-    const openPopup = (project) => {
+    const openPopup = (project : any) => {
         setSelectedProject(project);
     };
 
