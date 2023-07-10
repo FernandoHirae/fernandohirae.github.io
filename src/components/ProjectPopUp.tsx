@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 
 type Props = {
     projeto: {
-      title: string;
-      imgs: string[];
-      longDescription: string;
+        title: string;
+        imgs: string[];
+        longDescription: string;
     };
     onClose: () => void;
-  };
+};
 
 const ProjectsPopup: React.FC<Props> = ({ projeto, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -25,22 +25,6 @@ const ProjectsPopup: React.FC<Props> = ({ projeto, onClose }) => {
     const toggleFullscreenMode = () => {
         setFullscreenMode(!fullscreenMode);
     };
-
-    // const handleKeyDown = (e) => {
-    //     if (e.key === 'ArrowLeft') {
-    //         previousImage();
-    //     } else if (e.key === 'ArrowRight') {
-    //         nextImage();
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     document.addEventListener('keydown', handleKeyDown);
-
-    //     return () => {
-    //         document.removeEventListener('keydown', handleKeyDown);
-    //     };
-    // }, []);
 
     useEffect(() => {
         const handleOutsideClick = (event: MouseEvent) => {
@@ -68,7 +52,7 @@ const ProjectsPopup: React.FC<Props> = ({ projeto, onClose }) => {
                 )}
 
                 <div className='h-auto relative overflow-hidden mx-0 my-auto rounded-lg flex justify-center'>
-                    <Image className={`h-full object-cover cursor-pointer ${fullscreenMode? "w-full z-50":"w-3/4"} `} height={5000} width={5000} onClick={toggleFullscreenMode} src={projeto.imgs[currentImageIndex]} alt="" />
+                    <Image className={`h-full object-cover cursor-pointer ${fullscreenMode ? "w-full z-50" : "w-3/4"} `} height={5000} width={5000} onClick={toggleFullscreenMode} src={projeto.imgs[currentImageIndex] || ''} alt="" />
                     <button type="button" onClick={previousImage} className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                         <span className="inline-flex items-center ml-24 justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-800/80 group-focus:ring-4 group-focus:ring-white/20 group-focus:outline-none">
                             <svg className="w-4 h-4 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
