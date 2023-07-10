@@ -1,12 +1,21 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
-const ProjectsPopup = ({ projeto, onClose }) => {
+type Props = {
+    projeto: {
+      title: string;
+      imgs: string[];
+      longDescription: string;
+    };
+    onClose: () => void;
+  };
+
+const ProjectsPopup: React.FC<Props> = ({ projeto, onClose }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [fullscreenMode, setFullscreenMode] = useState(false);
 
     const nextImage = () => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % projeto.imgs.length);
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % projeto?.imgs.length);
     };
 
     const previousImage = () => {
@@ -34,8 +43,8 @@ const ProjectsPopup = ({ projeto, onClose }) => {
     // }, []);
 
     useEffect(() => {
-        const handleOutsideClick = (e : any) => {
-            if (!e.target.closest('.popup-container')) {
+        const handleOutsideClick = (event: MouseEvent) => {
+            if (!(event.target instanceof Node)) {
                 onClose();
             }
         };
