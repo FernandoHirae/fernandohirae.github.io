@@ -1,6 +1,7 @@
 {
   "name": "hirae-portfolio",
   "version": "0.1.0",
+  "homepage": "github-page/",
   "private": true,
   "scripts": {
     "build": "next build",
