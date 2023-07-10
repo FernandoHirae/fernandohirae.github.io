@@ -1,5 +1,4 @@
 import SideMenu from "./SideMenu";
-import myPhoto from "../../public/imgs/FHirae.jpeg"
 import { useState } from "react";
 import Image from "next/image";
 
@@ -13,7 +12,7 @@ function Header() {
     <div>
       <div className="flex flex-row items-center justify-between">
         <a href="/" className="h-60 max-h-14 flex flex-row items-center gap-2 m-3 pl-6">
-          <Image src={myPhoto} className="max-h-12 max-w-12 rounded-full border-2 border-purple-500 lg:max-h-16 lg:max-w-16" width={60} alt="" />
+          <Image src="/imgs/FHirae.jpeg" className="max-h-12 max-w-12 rounded-full border-2 border-purple-500 lg:max-h-16 lg:max-w-16" width={60} alt="" />
           <span className="text-white text-xl italic font-bold">Fernando Hirae</span>
         </a>
 

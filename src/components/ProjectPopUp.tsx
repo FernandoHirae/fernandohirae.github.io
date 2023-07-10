@@ -34,7 +34,7 @@ const ProjectsPopup = ({ projeto, onClose }) => {
     // }, []);
 
     useEffect(() => {
-        const handleOutsideClick = (e) => {
+        const handleOutsideClick = (e : any) => {
             if (!e.target.closest('.popup-container')) {
                 onClose();
             }
