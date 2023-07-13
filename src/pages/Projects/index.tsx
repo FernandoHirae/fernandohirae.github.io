@@ -19,7 +19,7 @@ function Projects() {
                 <h1 className="text-center pb-10 text-white text-4xl lg:pb-20 lg:text-6xl"><span className="text-purple-500 font-semibold"> My</span> Projects</h1>
                 <div className="grid grid-cols-7 gap-y-10 pb-10">
                     {projects.map((p) =>
-                        <div className={`col-span-4  ${p.reverse ? 'col-end-7' : 'col-end-6'}`}>
+                        <div key={p.id} className={`col-span-4  ${p.reverse ? 'col-end-7' : 'col-end-6'}`}>
                             <ProjectCard title={p.title} description={p.description} img={p.image} longDescription={p.longDescription} imgs={p.images} reverse={p.reverse} />
                         </div>
                     )}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { NextApiRequest, NextApiResponse } from 'next'
 require('dotenv').config()
 

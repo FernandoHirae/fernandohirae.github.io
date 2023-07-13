@@ -1,6 +1,7 @@
 import SideMenu from "./SideMenu";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   const [nav, setNav] = useState(true);
@@ -11,10 +12,10 @@ function Header() {
   return (
     <div>
       <div className="flex flex-row items-center justify-between">
-        <a href="/" className="h-60 max-h-14 flex flex-row items-center gap-2 m-3 pl-6">
+        <Link href="/" className="h-60 max-h-14 flex flex-row items-center gap-2 m-3 pl-6">
           <Image src="/imgs/FHirae.jpeg" className="max-h-12 max-w-12 rounded-full border-2 border-purple-500 lg:max-h-16 lg:max-w-16" width={60} alt="" />
           <span className="text-white text-xl italic font-bold">Fernando Hirae</span>
-        </a>
+        </Link>
 
         <button type="button" className="text-white items-center gap-2 m-3 mr-4 lg:hidden" onClick={showNav} >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-5 w-5 mb-1 fill-current text-white">

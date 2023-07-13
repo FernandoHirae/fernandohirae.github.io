@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 function ContactForm() {
@@ -10,30 +10,30 @@ function ContactForm() {
     const [sending, setSending] = useState(false);
     const [error, setError] = useState(false);
 
-    const onSubmit = async (e: FormEvent) => {
+    const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setSending(true);
-        try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                body: JSON.stringify({
-                    name, email, subject, message
-                }),
-                headers: {
-                    'content-type': 'application/json',
-                },
-            })
+        fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify({
+                name, email, subject, message
+            }),
+            headers: {
+                'content-type': 'application/json',
+            },
+        }).then(res => {
             console.log('STATUS', res.status)
             if (res.status === 200) {
                 setSending(false);
                 setSuccessful(true);
             }
-        } catch (err: any) {
+        }).catch(err => {
             console.error('Err', err);
             setSending(false);
             setError(true);
-        }
+        });
     }
+
     return (
         sending ? (<motion.h1
             initial={{ y: 1000, opacity: 1 }}

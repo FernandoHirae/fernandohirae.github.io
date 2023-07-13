@@ -19,11 +19,11 @@ function AboutMe() {
                 <div className="grid grid-cols-1 justify-center pb-10 lg:grid-cols-2">
 
                     <p className="flex flex-col gap-6 items-center text-xl lg:text-2xl xl:text-3xl h-full pb-4 lg:pb-0">
-                        <span className="text-gray-200 font-semibold lg:text-3xl xl:text-4xl"> I'm Fernando Hirae, a
-                            <span className="text-purple-500 font-semibold"> FullStack Developer
-                            </span> based in Gravataí, RS - Brazil
+                        <span className="text-gray-200 font-semibold lg:text-3xl xl:text-4xl"> I&apos;m Fernando Hirae, a
+                            <span className="text-purple-500 font-semibold"> FullStack Developer </span>
+                            based in Gravataí, RS - Brazil
                         </span>
-                        Passionate about creating innovative and functional solutions. I'm always looking for new challenges allowing me to expand my knowledge and create amazing products.
+                        Passionate about creating innovative and functional solutions. I&apos;m always looking for new challenges allowing me to expand my knowledge and create amazing products.
                     </p>
 
                     <div className="flex justify-center items-center">
