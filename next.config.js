@@ -1,14 +1,13 @@
-// module.exports = {
+
+module.exports = {
+    images: {
+      unoptimized: true,
+    },
+  }
+
+  // module.exports = {
 //     typescript: {
 //       ignoreBuildErrors: true,
 //     },
     
 //   }
-
-const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    images: {
-      unoptimized: true,
-    },
-  }
